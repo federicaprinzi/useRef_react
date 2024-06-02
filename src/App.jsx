@@ -1,35 +1,11 @@
-import React, { useState } from "react";
 import "./App.css";
-import CounterDisplay from "./components/CounterDisplay";
-
-function Counter({ initialValue, decrementValue }) {
-  const [count, setCount] = useState(initialValue);
-
-  const handleValue = () => {
-    setCount(count - decrementValue);
-  };
-
-  const handleReset = () => {
-    setCount(initialValue);
-  };
-
-  return (
-    <div>
-      <CounterDisplay count={count} />
-      <button className="buttons" onClick={handleValue}>
-        DIMINUISCI
-      </button>
-      <button className="buttons" onClick={handleReset}>
-        RESETTA
-      </button>
-    </div>
-  );
-}
+import Counter from "./components/Counter";
 
 const App = () => {
   return (
     <div>
-      <Counter initialValue={10} decrementValue={1} />
+      <h1>Counter:</h1>
+      <Counter initialValue={0} />
     </div>
   );
 };
